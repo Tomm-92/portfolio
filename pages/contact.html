@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Contact </title>
+        <title> Contact</title>
     </head>
     <body>
             <header> 
-                <h1> Contact Page </h1>
+                <h1> Contact me </h1>
+                <nav>
+                    <a href="../images/index.html" target="_blank">Home</a>
+                    <br />
+                    <a href="projects.html" target="_blank">Projects</a>
+                </nav>
             </header>
-            <br />
+            <hr>
             <main>
-          
+    <section> 
+    <h2> Please enter your details in the form below</h2> 
+  
+    <form>
+        <fieldset>
+          <legend>Personal details</legend>
+          <label for="firstname">First name</label>
+          <input id="firstname" type="text">
+      
+          <br>
+      
+          <label for="lastname">Last name</label>
+          <input id="lastname" type="text">
+      
+          <br>
+      
+          <label for="Email">Email address</label>
+          <input id="Email" type="email">
+        </fieldset>
+        <fieldset>
+          <legend>Enquiry details</legend>
+<p> Reason for making contact:</p>
+          <select name="reason for contact">
+            <option value="Job Offer" selected>Job Offer</option>
+            <option value="Interview" selected>Interview</option>
+            <option value="Complaint" selected>Complaint</option>
+            <option value="I found your wallet" selected>I found your wallet</option>
+          </select>
+
+          <br>
+      
+          <label for="further detail">Please provide any futher details </label>
+          <textarea id="further detail"></textarea>
+
+        </fieldset>
+      
+        <button type="submit">Submit my details</button>
+      </form>        
+
+    </section>
         </main>
-        <br />
-            <footer>  </footer>
+       <br><br />
+       <hr>
+            <footer> TMW - 2022  </footer>
     
     </body>
 </html>
