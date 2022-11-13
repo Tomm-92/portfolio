@@ -5,9 +5,20 @@
 
 h2 {
     background-color: black;
-    color: whitesmoke
 }
 
 .test-class {
     color:aquamarine;
+}
+
+.my-class h3 {
+    color: blue;
+}
+
+.my-class > p {
+    color: grey;
+}
+
+p + img {
+    height: 400px;
 }
