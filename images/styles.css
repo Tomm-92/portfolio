@@ -1,10 +1,21 @@
+* {  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #222222;
+  color: #ffe66b;
+  text-decoration: none;
+  vertical-align: center;
+}
+
 #introduction {  
     background-color: black;
     color: whitesmoke;  
 }
 
-h2 {
-    background-color: black;
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: lighter;
 }
 
 .test-class {
@@ -22,3 +33,73 @@ h2 {
 p + img {
     height: 400px;
 }
+
+#about-me {
+    background-color: black;
+}
+
+#about-me p {
+    color:red;
+}
+
+
+.profile-pic + p {
+    color: red;
+}
+
+#box:disabled {
+    outline: 3px solid green;
+  }
+
+  #box:checked + label {
+    color: green;
+  }
+
+  #socials:hover {
+    color:red
+    ;
+  }
+
+  #link1:visited {
+    color:blue;
+  }
+
+  #link1:active {
+    color:green
+  }
+
+
+  button:disabled {
+    color:red
+  }
+
+  li::marker {
+    color: blue;
+  }
+
+  a::after {
+    content: " - vist my page";
+ }
+
+/* above are pseudo-class selectors
+
+ p {
+  position: relative;
+}
+/* the above code is to do with positioning, and allows us to use the z-index property below, we will get to positioning a bit later on */  
+
+p::after {
+  content: "";
+  background-color: palegoldenrod;
+  height: 20px;
+  width: 50%;
+  position: absolute;
+  left: 20px;
+  z-index: -1;
+}
+/* above is a pseudo-element selector
+
+a[data-anchor="social"] {
+  color: green;
+}
+/* above is an attribute selector
