@@ -9,6 +9,12 @@
 #introduction {  
     background-color: black;
     color: whitesmoke;  
+    height: 1rem;
+    width: 100vw;
+    padding: 1px;
+    font-size: 12pt;
+    margin: 0%;
+    position: sticky;
 }
 
 h1 {
@@ -81,11 +87,12 @@ p + img {
     content: " - vist my page";
  }
 
-/* above are pseudo-class selectors
+/* <--!above are pseudo-class selectors--> */
 
  p {
   position: relative;
 }
+
 /* the above code is to do with positioning, and allows us to use the z-index property below, we will get to positioning a bit later on */  
 
 p::after {
@@ -97,9 +104,38 @@ p::after {
   left: 20px;
   z-index: -1;
 }
-/* above is a pseudo-element selector
+/* /* above is a pseudo-element selector */
 
 a[data-anchor="social"] {
   color: green;
+    text-decoration: none;
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 18pt;
+    margin-right: 10px;
+    color: rgb(0, 255, 55);
+    top: 10px;
+    left: 500px;
+  }
+/* /* above is an attribute selector  */
+
+.div-element {
+   height: 200px;
+   width: 99%;
+   border: 0px;
+   margin: 0px;
+   padding: 0px;
+   color: white;
+   background-color: red;
 }
-/* above is an attribute selector
+.span-element {
+  display: inline-block; 
+  height: 100px;
+  width: 33%; 
+  border: 0px;
+   margin: 0px;
+   padding: 0px;
+   color: white;
+   background-color: blue;
+}
