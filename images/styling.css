@@ -1,29 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Kalam&family=Lato&display=swap');
 
 * {  
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #222222;
-    color: #ffe66b;
     text-decoration: none;
     vertical-align: center;
     margin: 0;
     box-sizing: border-box;
   }
 
+  body {
+    background-color: #222222;
+    color: whitesmoke;
+  }
+
   .homepage_layout {
-    padding: 10px;
     display: grid;
-    grid-template-columns: 200px 1fr 100px;
-    grid-template-rows: 200px 100px 1fr 80px;
-    grid-gap: 10px;
+    grid-template-columns: 1;
+    grid-template-rows: repeat (9,fr);
+    grid-gap: 5px;
     grid-template-areas: 
-      "hello hello hello"
-      "nav nav nav"
-      "aside main main"
-      "footer footer footer";
+      "hello"
+      "nav"
+      "main"
+      "about_me"
+      "projects"
+      "footer";
     
     min-height: 100vh;
-    border: 1px solid red
     
   }
 
@@ -31,51 +35,61 @@
 
 .hello {
     grid-area: hello;
-    border: 1px solid red
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2vw;
+    text-align: center;
+    margin: 0 0 .3em;
+    background-color: #222222
+}  
+
+.hello > h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 100%;
+  font-family: 'Kalam', cursive;
 }
   .nav {
     grid-area: nav;
-    border: 1px solid red
+    text-align: center;
+    background-color: #D0E7E7
   }
 
-  .sidebar {
-    grid-area: aside;
-    border: 1px solid red
+  .about_me {
+    grid-area: about-me;
+    background-color: #00C896;
+    color: black;
   }
-  .content {
+  .projects {
     grid-area: main;
-    border: 1px solid red
+    background-color: #C8FCEA;
+    color: black;
   }
   .footer {
     grid-area: footer;
-    border: 1px solid red
   }
 
+  .photo_style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+    .my_photos {
+        padding: 5px;
+        background-color: #222222
+    }
 
-        .grid--flexbox { /* flexbox container */
-          display: flex;
-          flex-wrap: wrap;
-          &:after {
-            content:'';
-            display:block;
-            flex-grow: 10;
-          }
-        }
+    .grid--flexbox { /* flexbox container */
+        display: flex;
+        flex-wrap: wrap
 
-      .my_photo {
-        padding: 20px;
-        border: 1px solid red;
-        height: 40vh;
-        flex-grow: 1;
-        list-style: none;
-      }
-
-      .my_photo: :last-child {
-        flex-grow: 10
       }
 
       .grid--flexbox > li { /* flexbox items (inside container) */ 
-        flex-grow: 10
+     height: 30vh;
+     flex-grow: 1
+      }
+
+      .grid--flexbox > li:nth-child {
+        flex-grow: 10;
       }
 
       img {
@@ -87,78 +101,32 @@
 
       .menu {  
         display: flex;
+        justify-content:center;
         height: 100%;
         align-items: center;
       }
 
-      .sidebar, .footer {
-        padding: 20px;
-      }
-      
-      .logo img {
-        max-width: 100%;
-        display: block;
-      }
-      
       .menu {  
         /* list reset */
         padding: 0;
         margin: 0;
         list-style: none;
+        align-items: center
       }
       
       .menu li {
-        padding: 20px;
-        border: 1px solid red;
+        padding: 10px;
+        align-items: center;
+        background-color: #D0E7E7;
 
       }
       
       .menu a {
         text-decoration: none;
+        align-items: center;
+        color: #222222;
       }
       
             
-  h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 50px;
-    text-align: center;
-    margin: 0 0 .3em;
-  }
 
-  h2 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 25px;
-    text-align: center
-  }
 
-  @media (max-aspect-ratio: 1/1) {
-    li {
-      height: 30vh;
-    }
-  }
-  
-  // Short screens
-  
-  @media (max-height: 480px) {
-    li {
-      height: 80vh;
-    }
-  }
-  
-  // Smaller screens in portrait
-  
-  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
-    ul {
-      flex-direction: row;
-    }
-  
-    li {
-      height: auto;
-      width: 100%;
-    }
-    img {
-      width: 100%;
-      max-height: 75vh;
-      min-width: 0;
-    }
-  }
