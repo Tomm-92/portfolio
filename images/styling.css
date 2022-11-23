@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Kalam&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Jura:wght@700&family=Kalam:wght@300&family=Lato&display=swap');
+
 
 * {  
     text-decoration: none;
@@ -20,8 +22,8 @@
     grid-template-rows: repeat (9,fr);
     grid-gap: 5px;
     grid-template-areas: 
+      "nav"  
       "hello"
-      "nav"
       "main"
       "about_me"
       "projects"
@@ -35,36 +37,74 @@
 
 .hello {
     grid-area: hello;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 2vw;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.5vw;
     text-align: center;
-    margin: 0 0 .3em;
+    margin: 0 0 .5em;
     background-color: #222222
 }  
 
 .hello > h2 {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 
   font-size: 100%;
   font-family: 'Kalam', cursive;
+  font-weight: 300
 }
   .nav {
     grid-area: nav;
     text-align: center;
-    background-color: #D0E7E7
   }
 
   .about_me {
-    grid-area: about-me;
-    background-color: #00C896;
-    color: black;
+   grid-area: projects;
+    display: inline-grid;
+    color: whitesmoke;
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    margin: 2em 15em 3em;
+    font-weight: 200;
+    font-size: 1vw
   }
+
+  .about_me > p {
+   font-family: 'Kalam', cursive;
+   margin: 2em 0em 0em;
+  }
+
   .projects {
     grid-area: main;
-    background-color: #C8FCEA;
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Jura', sans-serif;
     color: black;
+    height: 80vh
   }
+
+  .recent_projects {  
+    display: flex;
+    justify-content:space-around;
+    height: 75%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .recent_projects li {
+    padding: 0px;
+    background-color: #222222;
+
+  }
+
+  .recent_projects img {
+    max-height: 25%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  
   .footer {
     grid-area: footer;
+    text-align: center
   }
 
   .photo_style {
@@ -101,9 +141,8 @@
 
       .menu {  
         display: flex;
-        justify-content:center;
+        justify-content:flex-end;
         height: 100%;
-        align-items: center;
       }
 
       .menu {  
@@ -111,20 +150,18 @@
         padding: 0;
         margin: 0;
         list-style: none;
-        align-items: center
+
       }
       
       .menu li {
         padding: 10px;
-        align-items: center;
-        background-color: #D0E7E7;
 
       }
       
       .menu a {
-        text-decoration: none;
-        align-items: center;
-        color: #222222;
+        text-decoration: none;  
+        color: whitesmoke;
+        font-family: 'Jura', sans-serif;
       }
       
             
