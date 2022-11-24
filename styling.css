@@ -16,6 +16,8 @@
     color: whitesmoke;
   }
 
+  /* this defines the grid layout of the page */
+
   .homepage_layout {
     display: grid;
     grid-template-columns: 1;
@@ -33,7 +35,7 @@
     
   }
 
-  /* grid items */
+ /* grid items */
 
 .hello {
     grid-area: hello;
@@ -45,8 +47,6 @@
 }  
 
 .hello > h2 {
-  font-family: 
-  font-size: 100%;
   font-family: 'Kalam', cursive;
   font-weight: 300
 }
@@ -77,47 +77,19 @@
     background-color: whitesmoke;
     font-family: 'Jura', sans-serif;
     color: black;
-    height: 80vh
+    min-height:50vh;
+    
   }
 
-  .recent_projects {  
-    display: flex;
-    justify-content:space-around;
-    height: 75%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .recent_projects li {
-    padding: 0px;
-    background-color: #222222;
-
-  }
-
-  .recent_projects img {
-    max-height: 25%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-  }
   
   .footer {
     grid-area: footer;
     text-align: center
   }
 
-  .photo_style {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-    .my_photos {
-        padding: 5px;
-        background-color: #222222
-    }
+/* flexbox of photos */
 
-    .grid--flexbox { /* flexbox container */
+    .grid--flexbox { 
         display: flex;
         flex-wrap: wrap
 
@@ -139,13 +111,73 @@
         vertical-align: bottom;
       }
 
-      .menu {  
+      .my_photos {
+        padding: 5px;
+        background-color: #222222
+    }
+
+    .photo_style {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+/* projects flexbox */
+
+  .recent_projects {  
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+
+  }
+
+  :root {
+    --cardWidth: 300px;
+    --cardHeight: 350px;
+    --cardMargin: 20px;
+    --photoheight: 100px
+  }
+
+  .recent_projects li {
+    background-color: #222222;
+    color: whitesmoke;
+    align-content: center;
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+  }
+
+  .recent_projects h1 {
+    margin: 0.3em
+  }
+
+  .recent_projects li > p {
+    margin: 1em
+  }
+
+  .recent_projects img {
+    height: var(--photoheight);
+    width: var(--cardWidth);
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+/* end of projects flexbox */
+
+/* nav bar links */   
+
+      .page_links {  
         display: flex;
         justify-content:flex-end;
         height: 100%;
       }
 
-      .menu {  
+      .page_links {  
         /* list reset */
         padding: 0;
         margin: 0;
@@ -153,16 +185,20 @@
 
       }
       
-      .menu li {
+      .page_links li {
         padding: 10px;
 
       }
       
-      .menu a {
+      .page_links a {
         text-decoration: none;  
         color: whitesmoke;
         font-family: 'Jura', sans-serif;
       }
+
+/* flexbox for socials */
+
+
       
             
 
