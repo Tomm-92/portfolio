@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Kalam&family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Jura:wght@700&family=Kalam:wght@300&family=Lato&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Jura:wght@700&family=Kalam:wght@300&family=Neucha&display=swap');
 * {  
     text-decoration: none;
     vertical-align: center;
@@ -31,7 +26,7 @@
       "projects"
       "footer";
     
-    min-height: 100vh;
+    min-height: 10vh;
     
   }
 
@@ -42,13 +37,13 @@
     font-family: 'Jura', sans-serif;
     font-size: 1.5vw;
     text-align: center;
-    margin: 0 0 .5em;
+    margin: 2 2 2em;
     background-color: #222222
 }  
 
 .hello > h2 {
   font-family: 'Kalam', cursive;
-  font-weight: 300
+  font-weight: 300;
 }
   .nav {
     grid-area: nav;
@@ -61,14 +56,16 @@
     color: whitesmoke;
     font-family: 'Jura', sans-serif;
     text-align: center;
-    margin: 2em 15em 3em;
+    margin: 2em 3em 3em;
     font-weight: 200;
-    font-size: 1vw
+    font-size: large
   }
 
   .about_me > p {
    font-family: 'Kalam', cursive;
    margin: 2em 0em 0em;
+   font-size: large;
+   font-family: 'Kalam', cursive;
   }
 
   .projects {
@@ -84,7 +81,8 @@
   
   .footer {
     grid-area: footer;
-    text-align: center
+    text-align: center;
+
   }
 
 /* flexbox of photos */
@@ -196,10 +194,25 @@
         font-family: 'Jura', sans-serif;
       }
 
+      .page_links a:hover {
+        color: #FFD802
+      }
+
 /* flexbox for socials */
 
+.fa {
+  padding: 10px;
+  font-size: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: whitesmoke;
+}
 
-      
+.fa:hover {
+  color: #FFD802
+}   
             
 
 
