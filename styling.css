@@ -11,6 +11,18 @@
     color: whitesmoke;
   }
 
+ h1 {
+    font-family: 'Jura', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-family: 'Jura', sans-serif;
+    font-weight: 300;
+    font-size: xx-large;
+  }
+
   /* this defines the grid layout of the page */
 
   .homepage_layout {
@@ -25,10 +37,7 @@
       "about_me"
       "projects"
       "contact"
-      "footer";
-    
-    min-height: 10vh;
-    
+      "footer";  
   }
 
  /* grid items */
@@ -39,16 +48,11 @@
     margin: 2 2 2em;
 }  
 
-.hello > h1 {
-  font-family: 'Jura', sans-serif;
-  font-weight: 300;
-  font-size: 3.5em;
-}
 
-.hello > h2 {
+.hello > h3 {
   font-family: 'Kalam', cursive;
   font-weight: 300;
-  font-size: x-large;
+  font-size: xx-large;
   padding: 12px
 }
   .nav {
@@ -63,10 +67,10 @@
     color: whitesmoke;
     font-family: 'Jura', sans-serif;
     text-align: center;
-    margin: 2em 3em 3em;
-    font-weight: 200;
-    font-size: large
+    margin: 1em 3em 2em;
   }
+
+ /* this section could be formatted and spaced better using the box model - see MCR codes codepen */
 
   .about_me > p {
    font-family: 'Kalam', cursive;
@@ -79,15 +83,12 @@
     grid-area: main;
     text-align: center;
     background-color: whitesmoke;
-    font-family: 'Jura', sans-serif;
-    min-height:50vh;
-    
+    font-family: 'Jura', sans-serif;  
   }
 
-  #projects > h1 {
-font-size: xx-large;
-color:#222222;
-padding-top: 30px
+  #projects > h2 {
+  color:#222222;
+  padding-top: 30px
   }
   
   #projects > p {
@@ -97,29 +98,25 @@ padding-top: 30px
     color:#222222;
       }
 
+      
+
   .contact {
     grid-area: contact;
     text-align: center;
     font-family: 'Jura', sans-serif;
-  }
-
-  .contact > h1 {
-    grid-column: 2/3;
-    text-align: center;
-    padding-top: 20px;
+    padding: 10px
   }
 
     .contact > h2 {
       grid-column: 2/3;
       text-align: center;
       padding-top: 25px;
-      padding-bottom: 25px
+      padding-bottom: 10px;
   }
 
+/*
 
-  .contact >h2:hover {
-    color: #FFD802
-  }
+NEED TO UNDERSTAND WHY THIS GRID DOES NOT WORK ON RESPONSIVELY 
 
   .contact_table {
     display: grid;
@@ -130,16 +127,23 @@ padding-top: 30px
     outline: none;
   }
 
+*/
+  .contact_table {
+    text-align: center;
+  }
+
+
   .label {
     grid-column: 2/3;
     text-align: left;
     padding-top: 10px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
   }
 
   .input {
     grid-column: 2/3;
     height: 25px;
+    width: 50%
   }
 
   #further_detail {
@@ -155,7 +159,8 @@ padding-top: 30px
     font-family: 'Jura', cursive;
     font-size: large;
     background-color: #222222;
-    border: 0
+    border: 0;
+    padding-bottom: 25px
   }
 
   .button:hover {
@@ -167,7 +172,6 @@ padding-top: 30px
     text-align: center;
     background-color: whitesmoke;
     color:#222222;
-    height: 50px
 
   }
 
@@ -194,7 +198,6 @@ padding-top: 30px
         object-fit: cover;
         vertical-align: bottom;
       }
-
       .my_photos {
         padding: 5px;
         background-color: #222222
@@ -236,7 +239,7 @@ padding-top: 30px
 
   }
 
-  .recent_projects h1 {
+  .recent_projects h3 {
     margin: 0.3em;
     font-size: x-large
   }
@@ -287,20 +290,11 @@ padding-top: 30px
       }
 
 
-      /* grid for contact me form
-
-
-
-
-
-
-
       /* flexbox for socials */
 
 .fa {
   padding: 10px;
   font-size: 50px;
-  width: 100px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
@@ -317,6 +311,13 @@ padding-top: 30px
 
 @media screen and (max-width: 600px) {
   .page_links {justify-content: center;
+
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .hello > h3 {font-size: x-large
 
   }
   
